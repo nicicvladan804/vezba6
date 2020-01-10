@@ -1,0 +1,75 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 800px;
+    height: 600px;
+    margin: 50px auto;
+    background-color: #050210;
+    filter: blur(1px);
+}
+.blok1{
+    width: 380px;
+    height: 380px;
+    margin: 110px 210px;
+    position: absolute;
+    background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+    border-radius: 100%;
+    animation: infinite my-animation 1.2s linear;
+}
+.blok1::before{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+    border: 1px solid #55fb9f;
+    border-radius: 100%;
+    filter: blur(60px);
+    left:-2px;
+    right:-2px;
+    top:-2px;
+    bottom:-2px;
+
+}
+.blok2{
+    background: #050210;
+    width: 330px;
+    height: 330px;
+    border-radius: 100%;
+    margin: 25px;
+    position: absolute;
+   
+    
+}
+.blok3{
+    width: 50px;
+    height: 50px;
+    background: #0c022e;
+    position:absolute;
+    border-radius: 100%;
+    margin: 140px;
+    animation: infinite circle-animation 1s linear;
+   }
+   @keyframes my-animation{
+       from{
+           transform: rotate(0deg);
+   
+       }
+       to{
+           transform: rotate(360deg);
+   
+       }
+   }
+   @keyframes circle-animation{
+       0%{
+           transform: scale(0);
+           opacity: 0.8;
+       }
+       100%{
+           transform: scale(6.4);
+           opacity: 0.5;
+       }
+   }
+
+
